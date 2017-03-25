@@ -40,7 +40,7 @@ function! s:SaveCurrent()
     endif
 endfunction
 
-function s:SessionCompletion(arg, cmd_line, cursor_pos)
+function! s:SessionCompletion(arg, cmd_line, cursor_pos)
     echomsg a:arg
     let session_dir = s:SessionDir()
     let sessions = split(system("find " . session_dir . " -name '*" . a:arg . "*.vim' -printf '%f\n' -type f"), "\n")
