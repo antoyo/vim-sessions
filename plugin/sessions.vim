@@ -34,7 +34,7 @@ function! s:Save(session)
     let g:sessions#session = a:session
 endfunction
 
-function s:SaveCurrent()
+function! s:SaveCurrent()
     if exists("g:sessions#session")
         call s:Save(g:sessions#session)
     endif
